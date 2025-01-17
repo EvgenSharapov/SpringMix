@@ -1,16 +1,20 @@
 package entity;
 
-import lombok.Getter;
-import lombok.Setter;
+
 import org.springframework.stereotype.Component;
 
-@Getter
-@Setter
+
 @Component
 public class Customer implements BuyingInterface{
+    public String getName() {
+        return name;
+    }
+
     private String name;
 
-
+    public void setName(String name) {
+        this.name = name;
+    }
 
     @Override
     public void buy() throws InterruptedException {

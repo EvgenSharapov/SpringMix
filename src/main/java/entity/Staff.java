@@ -1,13 +1,19 @@
 package entity;
 
-import lombok.Getter;
-import lombok.Setter;
+
 import org.springframework.stereotype.Component;
 
-@Getter
-@Setter
+
 @Component
 public class Staff implements SellingInterface{
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     private String name;
 
 
